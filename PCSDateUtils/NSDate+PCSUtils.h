@@ -22,5 +22,6 @@
 - (BOOL)isToday;
 - (BOOL)isYesterday;
 - (BOOL)isEqualToDateIgnoringTime:(NSDate *)date;
+- (void)getDayBoundsForDate:(NSDate *)date startDate:(NSDate **)startDate endDate:(NSDate **)endDate;
 
 @end

@@ -49,4 +49,10 @@
    return (components1.year == components2.year && components1.month == components2.month && components1.day == components2.day);
 }
 
+- (void)getDayBoundsForDate:(NSDate *)date startDate:(NSDate **)startDate endDate:(NSDate **)endDate {
+   NSDateComponents *noHourComponents = [[NSCalendar currentCalendar] components:NSYearMonthDayCalendarUnit fromDate:date];
+   *startDate = [[NSCalendar currentCalendar] dateFromComponents:noHourComponents];
+   *endDate = [*startDate dateByAddingTimeInterval:24*3600];
+}
+
 @end
