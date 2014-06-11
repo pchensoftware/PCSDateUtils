@@ -23,6 +23,11 @@
    return [[NSCalendar currentCalendar] dateFromComponents:components];
 }
 
+- (NSDate *)removeTime {
+   NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearMonthDayCalendarUnit fromDate:self];
+   return [[NSCalendar currentCalendar] dateFromComponents:components];
+}
+
 - (BOOL)isInPast {
    return [self isBeforeDate:[NSDate date]];
 }

@@ -16,6 +16,8 @@
 - (NSDate *)roundTo15Minutes;
 - (NSDate *)roundTo30Minutes;
 - (NSDate *)roundToMinutes:(int)minutes;
+- (NSDate *)removeTime;
+
 - (BOOL)isInPast;
 - (BOOL)isBeforeDate:(NSDate *)date;
 - (BOOL)isAfterDate:(NSDate *)date;
